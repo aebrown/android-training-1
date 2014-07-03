@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myapp"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:versionCode="101"
+    android:versionName="1.1">
 
   <uses-sdk
       android:minSdkVersion="11"
@@ -20,5 +21,15 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity
+        tools:targetApi="16"
+        android:name="com.example.myapp.DisplayMessageActivity"
+        android:label="@string/title_activity_display_message"
+        android:parentActivityName="com.example.myapp.MainActivity">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="com.example.myapp.MainActivity" />
+    </activity>
+
   </application>
 </manifest>
